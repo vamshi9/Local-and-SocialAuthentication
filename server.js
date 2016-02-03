@@ -2,6 +2,7 @@ var express = require('express') ;
 
 var app = express() ; 
 
+//setting up the port
 var port = process.env.PORT || 2626;
 
 var cookie = require('cookie-parser') ; 
