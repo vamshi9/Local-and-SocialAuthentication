@@ -28,7 +28,7 @@ module.exports = function(app,passport){
 
 	//process the signup form
 	app.post('/signup', passport.authenticate('local-signup', {
-        successRedirect : '/', // redirect to the secure profile section
+        successRedirect : '/profile', // redirect to the secure profile section
         failureRedirect : '/signup', // redirect back to the signup page if there is an error
         failureFlash : true // allow flash messages
         })); 
@@ -42,7 +42,7 @@ module.exports = function(app,passport){
 	});
 
 	// route for facebook authentication and login
-    app.get('/auth/facebook', passport.authenticate('facebook',{authType : 'rerequest', scope : ['email','user_friends', 'manage_pages','public_profile','publish_actions','user_about_me'],return_scopes: true}));
+    app.get('/auth/facebook', passport.authenticate('facebook',{scope : ['email','user_friends', 'manage_pages','public_profile','publish_actions','user_about_me'],return_scopes: true}));
 
     // handle the callback after facebook has authenticated the user
     app.get('/auth/facebook/callback',
@@ -70,6 +70,62 @@ module.exports = function(app,passport){
 		//after logout we have to redirect user to home page 
 		res.redirect('/')
 	});
+
+
+    //Authorize( If already logged in)
+
+    //local login
+    app.get('/connect/local',function(req,res){
+        res.render('connect-local.ejs',{message : req.flash('loginMessage')});
+    });
+    app.post('/connect/local',passport.authenticate('local-signup',{
+        successRedirect : '/profile',
+        failureRedirect : '/connect/local',
+        failureFlash : true
+    }));
+
+    //facebook authorization
+    app.get('/connect/facebook',passport.authorize('facebook',{scope : ['email']}));
+    app.get('/connect/facebook/callback',passport.authorize('facebook',{
+        successRedirect : '/profile',
+        failureRedirect : '/',
+    }));
+
+    //google authorization
+    app.get('/connect/google',passport.authorize('google',{scope : ['profile','email']}));
+    app.get('/connect/google/callback',passport.authorize('google',{
+        successRedirect : '/profile',
+        failureRedirect : '/'
+    }));
+
+    //unlink local account
+    app.get('/unlink/local',function(req,res){
+        var user = req.user;
+        user.local.email = undefined;
+        user.local.password = defined;
+        user.save(function(err){
+            res.redirect('/profile');
+        });
+    });
+
+    //unlink facebook account
+    app.get('/unlink/facebook',function(req,res){
+        var user = req.user;
+        user.facebook.token = undefined;
+        user.save(function(err){
+            res.redirect('/profile');
+        });
+    });
+
+    //unlink google account
+    app.get('unlink/google',function(req,res){
+        var user = req.user;
+        user.google.token = undefined;
+        user.save(function(err){
+            res.redirect('/profile');
+        });
+    });
+
 };
 
 //checking whether they are logged in or not
