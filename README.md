@@ -21,3 +21,6 @@ passport.js Authentication
 ![alt text](https://github.com/vamshi9/Local-and-SocialAuthentication/blob/master/images/Screenshot%20(135).png "home page")
 
 * Now let's dive into the application and have some fun * 
+
+>Just be so clear about this structure because *routes.js* (you'll come to know) is going to play huge role in this application.
+ ![alt text](https://github.com/vamshi9/Local-and-SocialAuthentication/blob/master/images/Capture.PNG "Application Structure")
