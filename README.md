@@ -17,7 +17,7 @@ passport.js Authentication
   
    >[PassportJS](http://passportjs.org/docs)
   
-#OMG did I forget to mention about what we are about see o.O
+#OMG did I forget to mention about what we are about to see o.O
 ![alt text](https://github.com/vamshi9/Local-and-SocialAuthentication/blob/master/images/Screenshot%20(135).png "home page")
 
 * Now let's dive into the application and have some fun * 
