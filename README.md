@@ -31,6 +31,7 @@ passport.js Authentication
    
    open command prompt set the path and type *npm install dependency --save* which directly saves into your package.json file
    
-   Following are the dependencies we need to install.
-   ![alt text](https://github.com/vamshi9/Local-and-SocialAuthentication/blob/master/images/Screenshot%20(128).png)
+>Following are the dependencies we need to install.
+
+![alt text](https://github.com/vamshi9/Local-and-SocialAuthentication/blob/master/images/Screenshot%20(128).png)
 
