@@ -11,7 +11,7 @@ passport.js Authentication
        
    >Mongoose **mongoDB-database**
        
-   >EJS **Template Engine **
+   >EJS **Template Engine ** *you can use any template engine like jade,handlebars*
        
    >brypt-Nodejs **hashing password**
   
@@ -24,3 +24,13 @@ passport.js Authentication
 
 >Just be so clear about this structure because *routes.js* (you'll come to know) is going to play huge role in this application.
  ![alt text](https://github.com/vamshi9/Local-and-SocialAuthentication/blob/master/images/Capture.PNG "Application Structure")
+ 
+>Your application is useless without dependencies so how do we install these dependencies?
+
+   Before installation make sure *npm* works fine otherwise installation will be resulting in bunch of errors.If you don't know how to install node-express go through [Derek Benas express and mongo tutorial](https://www.youtube.com/playlist?list=PLGLfVvz_LVvSpxyVx5XcprEgvhJ1BzruD) video.I love his videos more than any other online tutorial
+   
+   open command prompt set the path and type *npm install dependency --save* which directly saves into your package.json file
+   
+   Following are the dependencies we need to install.
+   ![alt text](https://github.com/vamshi9/Local-and-SocialAuthentication/blob/master/images/Screenshot%20(128).png)
+
