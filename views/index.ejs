@@ -5,18 +5,26 @@
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css"> <!-- load bootstrap css -->
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css"> <!-- load fontawesome -->
     <style>
-        body        { padding-top:0px; }
+        body        { padding-top:200px; height: 100%;  }
+        .jumbotron {
+            background-color:transparent !important;
+            color: ;
+        }
+        .glyphicon{
+            color:#  ;
+        }
+
     </style>
 </head>
-<body>
+<body background = "../images/wallpaper.jpg">
 <div class="container">
 
-    <div class="jumbotron text-center">
-        <h1><span class="fa fa-lock"></span> Drakle Home</h1>
+    <div class="jumbotron text-center" background="none">
+        <h1><span class="glyphicon glyphicon-globe"></span> Drakle Home</h1>
 
         <p>Login or Register with:</p>
 
-        <a href="/login" class="btn btn-default"><span class="glyphicon glyphicon-globe"></span> Local Login</a>
+        <a href="/login" class="btn btn-default"><span class="fa fa-user"></span> Local Login</a>
         <a href="/signup" class="btn btn-default"><span class="fa fa-user"></span> Local Signup</a><br/>
         <a href="/auth/facebook" class="btn btn-primary"><span class="fa fa-facebook"></span> Log in with Facebook</a>
         <a href="/auth/google" class="btn btn-danger"><span class="fa fa-google-plus"></span> Log in with Google</a>
