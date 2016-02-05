@@ -4,8 +4,7 @@ passport.js Authentication
 #About this Project
    >I have done everything right from the scratch and cross-checked it many times so i'll assure you that there will be no error unless you create one.
    
-#Things to be known
-   >Before going into the project we need to install few things
+#Before going into the project we need to know few things
    
    >Express **Framework** *you can install it from here* [Node installation](https://nodejs.org/en/) 
        
@@ -17,7 +16,7 @@ passport.js Authentication
   
    >[PassportJS](http://passportjs.org/docs)
   
-#OMG did I forget to mention about what we are about to see o.O
+#OMG! Did I forget to mention about what we are about to see? o.O
 ![alt text](https://github.com/vamshi9/Local-and-SocialAuthentication/blob/master/images/Screenshot%20(135).png "home page")
 
 >Just be so clear about this structure because *routes.js* (you'll come to know) is going to play huge role in this application.
@@ -44,7 +43,7 @@ passport.js Authentication
   
 ```javascript
 
-       var express = require('express') ; 
+var express = require('express') ; 
 
 var app = express() ; 
 
@@ -108,6 +107,9 @@ console.log('server is running on port ' + port ) ;
 
 
 ```
+
+Yeah! You are stuck with an error right. That's because we haven't included out passport file 
+![alt text](https://github.com/vamshi9/Local-and-SocialAuthentication/blob/master/images/error1.PNG "error1")
 
 
 
