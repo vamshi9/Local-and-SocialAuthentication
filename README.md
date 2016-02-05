@@ -41,8 +41,10 @@ passport.js Authentication
 #server.js
   We need to set up server.js with all bootstraping of the files which we are going to see.
   Get all the requirements through *require()*
-  '''javascript
-      var express = require('express') ; 
+  
+```javascript
+
+       var express = require('express') ; 
 
 var app = express() ; 
 
@@ -103,7 +105,9 @@ require('./apps/routes.js')(app,passport) ;
 app.listen(port) ;
 
 console.log('server is running on port ' + port ) ;
-'''
+
+
+```
 
 
 
