@@ -17,6 +17,7 @@ passport.js Authentication
    >[PassportJS](http://passportjs.org/docs)
   
 #OMG! Did I forget to mention about what we are about to see? o.O
+
 ![alt text](https://github.com/vamshi9/Local-and-SocialAuthentication/blob/master/images/Screenshot%20(135).png "home page")
 
 >Just be so clear about this structure because *routes.js* (you'll come to know) is going to play huge role in this application.
@@ -25,9 +26,13 @@ passport.js Authentication
  
 >Your application is useless without dependencies so how do we install these dependencies?
 
-   Before installation make sure *npm* works fine otherwise installation will be resulting in bunch of errors.If you don't know how to install node-express go through [Derek Benas express and mongo tutorial](https://www.youtube.com/playlist?list=PLGLfVvz_LVvSpxyVx5XcprEgvhJ1BzruD) video.I love his videos more than any other online tutorial
+   Before installation make sure *npm* works fine otherwise installation will be resulting in bunch of errors.
    
-   open command prompt set the path and type *npm install dependency --save* which directly saves into your package.json file
+   If you don't know how to install node-express go through [Derek Benas express and mongo      tutorial](https://www.youtube.com/playlist?list=PLGLfVvz_LVvSpxyVx5XcprEgvhJ1BzruD) video.
+   
+   I love his videos more than any other online tutorial.
+   
+   Open command prompt set the path and type *npm install dependency --save* which directly saves into your package.json file
    
 >Following are the dependencies we need to install.
 
@@ -39,6 +44,7 @@ passport.js Authentication
 
 #server.js
   We need to set up server.js with all bootstraping of the files which we are going to see.
+  
   Get all the requirements through *require()*
   
 ```javascript
@@ -108,8 +114,15 @@ console.log('server is running on port ' + port ) ;
 
 ```
 
-Yeah! You are stuck with an error right. That's because we haven't included out passport file 
+*Yeah! You are stuck with an error right. That's because we haven't included out passport file*
+
 ![alt text](https://github.com/vamshi9/Local-and-SocialAuthentication/blob/master/images/error1.PNG "error1")
+
+Chill out! Just comment out that line
+
+```javascript
+    require('./config/passport')(passport);
+```
 
 
 
