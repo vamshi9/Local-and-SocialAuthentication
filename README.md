@@ -127,7 +127,7 @@ Did you notice one strange thing in the above command prompt? Hope you didn't! :
 
 I always use **nodemon** to run server because I need not restart my server again and again.I am going to pass my work to nodemon so it checks out my server whenever I make any changes.
 
-Now open your preferable browser and 
+Now open your preferable browser and type the localhost:2626.This works fine right! Yay! We have compelted our first step.
 
 
 
