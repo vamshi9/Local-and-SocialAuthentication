@@ -18,7 +18,7 @@ passport.js Authentication
   
 #OMG! Did I forget to mention about what we are about to see? o.O
 
-![alt text](https://github.com/vamshi9/Local-and-SocialAuthentication/blob/master/images/Screenshot%20(135).png "home page")
+![alt text](https://github.com/vamshi9/Local-and-SocialAuthentication/blob/master/images/Screenshot%20(145).png "home page")
 
 >Just be so clear about this structure because *routes.js* (you'll come to know) is going to play huge role in this application.
 
@@ -118,11 +118,16 @@ console.log('server is running on port ' + port ) ;
 
 ![alt text](https://github.com/vamshi9/Local-and-SocialAuthentication/blob/master/images/error1.PNG "error1")
 
-Chill out! Just comment out that line
+Chill out! Just comment out this line.
 
 ```javascript
     require('./config/passport')(passport);
 ```
+Did you notice one strange thing in the above command prompt? Hope you didn't! :p. 
+
+I always use **nodemon** to run server because I need not restart my server again and again.I am going to pass my work to nodemon so it checks out my server whenever I make any changes.
+
+Now open your preferable browser and 
 
 
 
