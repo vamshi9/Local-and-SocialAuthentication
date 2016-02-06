@@ -1,4 +1,4 @@
-# Paaport Authentication
+# Passport Authentication
 passport.js Authentication
 
 #About this Project
